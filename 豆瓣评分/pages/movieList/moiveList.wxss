@@ -1,0 +1,16 @@
+/* pages/movieList/moiveList.wxss */
+
+page{
+    width: 100%;
+}
+.container {
+    padding: 20rpx 20rpx;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+}
+.item-wrapper {
+    width: calc((100% - 20rpx*2)/3);
+    margin-top: 20rpx;
+}

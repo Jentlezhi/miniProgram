@@ -1,0 +1,38 @@
+/* components/nav-bar/nav-bar.wxss */
+
+.container {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+.nav-bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.icons{
+  display: flex;
+  height: 100%;
+  /* background-color: burlywood; */
+  align-items: center;
+  position: absolute;
+  left: 0;
+}
+
+.icons .back {
+  margin-left: 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.icons .home {
+  margin-left: 30rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.title {
+  font-size: 40rpx;
+}

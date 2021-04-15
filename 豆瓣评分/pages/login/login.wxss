@@ -1,0 +1,42 @@
+/* pages/login/login.wxss */
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30rpx;
+}
+.logo{
+    width: 144rpx;
+    height: 144rpx;
+    margin-top: 100rpx;
+}
+.btn-login{ 
+    line-height: 80rpx;
+    width: 100%;
+    text-align: center;
+    border-radius: 10rpx;
+    margin: 0 20rpx;
+}
+.wechat{
+    background-color: #42BD55;
+    color: #fff;
+    margin-top: 50rpx;
+}
+.douban{
+    background-color: #fff;
+    color: #42BD55;
+    border:1rpx solid #42BD55;
+    margin-top: 30rpx;
+}
+.agreement{
+    display: flex;
+    flex-direction: row;
+    color: #9E9E9E;
+    font-size: 25rpx;
+    position: absolute;
+    bottom: 50rpx;
+}
+.agreementDouban{
+    margin-left: 10rpx;
+    color: #42BD55;
+}

@@ -1,0 +1,46 @@
+<!-- pages/main/main.wxml -->
+<nav-bar title="首页" statusBarBackgroundColor="#42BD55" navBarBackgroundColor="#42BD55" titleColor="#fff"></nav-bar>
+
+<view class="container">
+  <view class="header">
+    <view class="search-wrapper">
+      <image class="search-icon" src="/assets/imgs/ic_search.png" />
+      <view class="search-text">搜索</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="row" wx:for="{{allMovies}}" wx:for-item="catMovies">
+      <view class="title-wrapper">
+        <view class="title">{{ catMovies.title }}</view>
+        <view class="see-more" data-index="{{ index }}" bind:tap="viewMore">
+          查看更多
+          <view class="arrow"></view>
+        </view>
+      </view>
+      <scroll-view class="scroll-view-H" scroll-x="{{true}}">
+        <movie-item
+          class="main-movie"
+          wx:for="{{ catMovies.movies }}"
+          wx:for-item="movie"
+          movie="{{ movie }}"
+          containerStyle="main-movie"
+          >
+        </movie-item>
+        <!-- <view class="items" wx:for="{{ catMovies.movies }}" wx:for-item="movie">
+          <view class="item">
+            <image class="cover" src="{{ movie.cover }}" mode="aspectFill" />
+            <view class="name">{{ movie.title }}</view>
+            <view class="star-wrapper">
+              <view class="stars" wx:for="{{ movie.starValues }}" wx:for-item="value">
+                <image wx:if="{{ value == 1 }}" class="star" src="/assets/imgs/rating_star_small_on.png" />
+                <image wx:elif="{{ value == 0.5 }}" class="star" src="/assets/imgs/rating_star_small_half.png" />
+                <image wx:elif="{{ value == 0 }}" class="star" src="/assets/imgs/rating_star_small_off.png" />
+              </view>
+              <view class="score">{{ movie.rate }}</view>
+            </view>
+          </view>
+        </view> -->
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/movieList/moiveList.wxml-->
+<nav-bar title="{{ title }}" showBack="true"></nav-bar>
+
+<view class="container">
+    <view class="item-wrapper" wx:for="{{ movies }}" wx:for-item="movie">
+        <movie-item movie="{{ movie }}">
+    </movie-item>
+    </view>
+    <!-- <movie-item wx:for="{{ movies }}" wx:for-item="movie" movie="{{ movie }}" containerStyle="">
+    </movie-item> -->
+</view>

@@ -1,0 +1,45 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+    <view class="login-wrapper">
+        <view class="login" bind:tap="login">登录</view>
+        <!-- /*bg_mine_login*/ -->
+        <image class="bg" src="/assets/imgs/bg_mine_login.png" mode="aspectFill"/>
+    </view>
+    <view class="items-wrapper">
+        <view class="title-wrapper">
+            <view class="title">我的书影音</view>
+            <view class="btn-title" bind:tap="login">登录查看
+                <view class="arrow"></view>
+            </view>
+            
+        </view>
+
+        <view class="items">
+            <view class="item-wrapper">
+                <view class="item" wx:for="{{items}}">
+                    <image class="" src="/assets/imgs/{{item.icon}}" mode="aspectFit"/>
+                    <view class="analysis-wrapper">
+                        <view class="title">{{item.title}}</view>
+                        <view class="count-wrapper">
+                            <view class="count">{{item.count}}</view>
+                            <view class="count-desc">{{item.countDesc}}</view>
+                        </view>
+                    </view>
+                    <view class="movie-wrapper">
+                        <text class="desc">{{item.mark}}</text>
+                    </view>
+                    <view class="btn-wrapper" bind:tap="begin" data-index="{{index}}">
+                        <view class="btn">
+                            立即开启
+                        </view>
+                        <view class="arrow"></view>
+                    </view>
+                    <view class="line" wx:if="{{index!=items.length-1}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="blank"></view>
+    <view class="version">版本1.0.39</view>
+</view>
+  
